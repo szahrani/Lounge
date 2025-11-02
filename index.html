@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lounge Menu</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Lounge</h1>
+    <button id="langToggle">English</button>
+  </header>
+
+  <main id="menu">
+    <!-- Appetizers -->
+    <section>
+      <h2>المقبلات</h2>
+      <div class="items">
+        <div class="card" data-desc="حمص لبناني كريمي يقدم بزيت الزيتون والخبز المحمص. / Creamy Lebanese hummus with olive oil and toasted bread." data-price="25 SAR">
+          <img src="images/appetizer1.jpg" alt="حمص" />
+          <p>حمص لبناني</p>
+        </div>
+        <div class="card" data-desc="ورق عنب طازج بحشوة الأرز والخضار. / Fresh grape leaves stuffed with rice and vegetables." data-price="28 SAR">
+          <img src="images/appetizer2.jpg" alt="ورق عنب" />
+          <p>ورق عنب</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Salads -->
+    <section>
+      <h2>السلطات</h2>
+      <div class="items">
+        <div class="card" data-desc="تبولة شرقية منعشة بالبقدونس والطماطم. / Refreshing tabbouleh with parsley and tomato." data-price="24 SAR">
+          <img src="images/salad1.jpg" alt="تبولة" />
+          <p>تبولة</p>
+        </div>
+        <div class="card" data-desc="سلطة سيزر بالدجاج والصلصة الخاصة. / Chicken Caesar salad with special dressing." data-price="32 SAR">
+          <img src="images/salad2.jpg" alt="سيزر" />
+          <p>سيزر بالدجاج</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desserts -->
+    <section>
+      <h2>الحلويات</h2>
+      <div class="items">
+        <div class="card" data-desc="تشيز كيك بالتوت. / Blueberry cheesecake." data-price="22 SAR">
+          <img src="images/dessert1.jpg" alt="تشيز كيك" />
+          <p>تشيز كيك</p>
+        </div>
+        <div class="card" data-desc="براونيز شوكولاتة دافئة. / Warm chocolate brownies." data-price="20 SAR">
+          <img src="images/dessert2.jpg" alt="براونيز" />
+          <p>براونيز</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Lounge — لحظة فخامة قبل النكهة.</p>
+  </footer>
+
+  <div id="popup" class="hidden">
+    <div class="popup-content">
+      <span id="close">&times;</span>
+      <img id="popup-img" src="" alt="">
+      <h3 id="popup-title"></h3>
+      <p id="popup-desc"></p>
+      <strong id="popup-price"></strong>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
