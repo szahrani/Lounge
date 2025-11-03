@@ -1,3 +1,4 @@
+// Popup
 const popup = document.getElementById('popup');
 const popupImg = document.getElementById('popup-img');
 const popupTitle = document.getElementById('popup-title');
@@ -5,8 +6,8 @@ const popupDesc = document.getElementById('popup-desc');
 const popupPrice = document.getElementById('popup-price');
 const closeBtn = document.getElementById('close');
 const cards = document.querySelectorAll('.card');
-const langToggle = document.getElementById('langToggle');
-let lang = 'ar';
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.tab-content');
 
 cards.forEach(card => {
   card.addEventListener('click', () => {
@@ -21,14 +22,15 @@ cards.forEach(card => {
 closeBtn.addEventListener('click', () => popup.classList.add('hidden'));
 popup.addEventListener('click', e => { if (e.target === popup) popup.classList.add('hidden'); });
 
-langToggle.addEventListener('click', () => {
-  if (lang === 'ar') {
-    document.body.dir = 'ltr';
-    langToggle.textContent = 'العربية';
-    lang = 'en';
-  } else {
-    document.body.dir = 'rtl';
-    langToggle.textContent = 'English';
-    lang = 'ar';
-  }
+// Tabs
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const target = tab.getAttribute('data-target');
+    contents.forEach(c => {
+      c.classList.remove('active');
+      if (c.id === target) c.classList.add('active');
+    });
+  });
 });
